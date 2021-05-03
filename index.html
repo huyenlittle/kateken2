@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Fill the title-->
+    <title>Add a short title for your project here</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import your final project's stylesheet and Google Fonts -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- import Google Fonts -->
+
+    <!-- import your final project's javascript files -->
+    <script src="/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/740e6c08cb.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- please just use this line for this project only as it contains my own Font Awesome key -->
+    <!-- import external scripts from other JS libraries -->
+    <!-- Highcharts-->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+    <!-- DataTable-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Hero image (the main image of the page; this can be a photoshop arrangement, a video, or a vector graphics; just pick one option) -->
+    <div id="heroimg">
+      <!-- upload an image/graphic to the assets and copy the link and paste inside src="", add a short name to alt="" -->
+      <img
+        src="https://cdn.glitch.com/180aa395-6359-4622-9199-1485666c0220%2FScreenshot%20(57).png?v=1619806856255"
+        alt="Gas production"
+        width="100%"
+      />
+
+      <!-- Upload a video to the assets and copy the link and write the following code
+        <video width="100%" height="100%" controls> 
+           <source src="" type="video/mp4">
+        </video>
+        Make sure you add the link between src=""
+        -->
+
+      <!-- Instead of uploading a video, you can copy the emmbedded code of a YouTube video and paste here-->
+    </div>
+
+    <!-- the headings of your story -->
+    <div id="intro">
+      <h1>Texas Gas Production Trending Down</h1>
+      <p class="byline">Bernard, Kate, and Kole | For MC 316</p>
+      <p class="date">Published: 7 May 2021</p>
+    </div>
+
+    <!-- social media menu (replace the placeholders with your real facebook, twitter, instagram links-->
+    <div id="social">
+      <ul>
+        <li>
+          <a href="https://twitter.com/kstatecollegian" target="_blank" id="twitter"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://facebook.com/" target="_blank" id="facebook"
+            ><i class="fab fa-facebook"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://instagram.com/" target="_blank" id="instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- start writing your story below-->
+    <div class="main-text">
+      <p>
+After reaching record highs in 2018 and 2019, Texas has seen a drastic decrease in the state’s production of natural gas.       </p>
+      <p data-dummytext="">
+        At the beginning of 2020, Texas was the highest producer of natural gas in the world. Production increased by 1.27 trillion cubic feet in 2019. This was nearly 20% more than previous years. The state was able to jump even higher than Pennsylvania, which sits as the United State’s second-highest natural gas producer. 
+
+      </p>
+    </div>
+
+    <!-- your first section -->
+    <h3>Highs contribute to lows</h3>
+    <!-- add your first graphics here -->
+    <div id="graphic-1">
+      <!-- if you are using Tableau Public, copy the embedded code and replace my code below -->
+   
+
+    <!-- if you are using Highchart JS, add a pair of script tags below and write the code in between; make sure you replace "container" with "graphic-1"-->
+
+    <div class="main-text">
+      <p>
+        However, it was this record breaking production that set Texas up to have lower rates in the years to follow. Higher production rates allowed for natural gas in storage to increase. This meant that there was less of a demand for newly produced resources. 
+      </p>
+      <p data-dummytext="">
+        Continue paragraph here
+      </p>
+    </div>
+
+    <!-- your second section -->
+    <h4>Warm weather impact</h4>
+
+    <!-- add your second graphics here -->
+    <div id="graphic-2">
+      <!-- if you are using Tableau Public, copy the embedded code and paste here -->
+    </div>
+
+    <!-- if you are using Highchart JS, write the code in between a pair of script tags below; make sure you replace "container" with "graphic-2"-->
+
+    <script> Highcharts.chart('graphic-2', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Gas Production in Texas'
+    },
+    subtitle: {
+        text: 'Source: U.S. Energy Information Administration'
+    },
+    xAxis: {
+        categories: [
+           '2015',
+           '2016',
+           '2017',
+           '2018',
+           '2019',
+           '2020',
+           '2021'
+        ],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Gas Production (million cubic ft)'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} mil cubic ft</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'February',
+        data: [615252, 594949, 512125,577886,675802,771344, 591656]
+
+    }, {
+        name: 'August',
+        data: [667422, 611890, 576037, 695283, 836414, 788459]
+
+    }]
+});</script>
+
+    <div class="main-text">
+      <p>
+        Along with this previous production boom, other factors contributed to these low numbers. 2019 saw one of the warmest winters on record. This decreased the amount of gas utilized by consumers, which also helped increase the previously mentioned storage numbers. 
+      </p>
+      <p data-dummytext=""></p>
+    </div>
+
+    <!-- your third section -->
+      <h4>Effects of COVID-19</h4>
+
+       <div class="main-text">
+      <p>
+Weather was not the only contributor however. The COVID-19 pandemic had a great influence on natural gas production, with impacts that experts predict will carry into the rest of 2021.      </p>
+      <p data-dummytext="">
+        COVID-19 also significantly decreased the demand for natural gas. Consumers, both residential and commercial, found everyday operations greatly disrupted by the outbreak. This meant that consumers did not require as much natural gas as previous years, as they were not operating their daily lives and business days the same way. 
+      </p>
+    </div>
+
+    <h3>View gas production for select states in the table below</h3>
+
+    <!-- add your third graphics here -->
+    <div id="graphic-3">
+      <table
+        id="example"
+        class="display"
+        width="100%"
+        style="text-align: center;"
+      >
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Month</th>
+            <th>State</th>
+            <th>Production (million cubic ft)</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+
+    <script> var dataSet = [
+  {
+    Year: 2018,
+    Month: "January",
+    State: "Alaska",
+    "Production (million cubic ft)": "31077"
+  },
+  {
+    Year: 2019,
+    Month: "January",
+    State: "Alaska",
+    "Production (million cubic ft)": "30503"
+  },
+  {
+    Year: 2020,
+    Month: "January",
+    State: "Alaska",
+    "Production (million cubic ft)": "30018"
+  },
+  {
+    Year: 2021,
+    Month: "January",
+    State: "Alaska",
+    "Production (million cubic ft)": "31632"
+  },
+  {
+    Year: 2018,
+    Month: "January",
+    State: "Arkansas",
+    "Production (million cubic ft)": "51300"
+  },
+  {
+    Year: 2019,
+    Month: "January",
+    State: "Arkansas",
+    "Production (million cubic ft)": "47446"
+  },
+  {
+    Year: 2020,
+    Month: "January",
+    State: "Arkansas",
+    "Production (million cubic ft)": "42586"
+  },
+  {
+    Year: 2021,
+    Month: "January",
+    State: "Arkansas",
+    "Production (million cubic ft)": "39899"
+  },
+  {
+    Year: 2018,
+    Month: "January",
+    State: "California",
+    "Production (million cubic ft)": "17104"
+  },
+  {
+    Year: 2019,
+    Month: "January",
+    State: "California",
+    "Production (million cubic ft)": "16800"
+  },
+  {
+    Year: 2020,
+    Month: "January",
+    State: "California",
+    "Production (million cubic ft)": "15661"
+  },
+  {
+    Year: 2021,
+    Month: "January",
+    State: "California",
+    "Production (million cubic ft)": "12043"
+  },
+  {
+    Year: 2018,
+    Month: "January",
+    State: "Colorado",
+    "Production (million cubic ft)": "151921"
+  },
+  {
+    Year: 2019,
+    Month: "January",
+    State: "Colorado",
+    "Production (million cubic ft)": "166325"
+  },
+  {
+    Year: 2020,
+    Month: "January",
+    State: "Colorado",
+    "Production (million cubic ft)": "177810"
+  },
+  {
+    Year: 2021,
+    Month: "January",
+    State: "Colorado",
+    "Production (million cubic ft)": "159793"
+  },
+  {
+    Year: 2018,
+    Month: "January",
+    State: "Kansas",
+    "Production (million cubic ft)": "17473"
+  },
+  {
+    Year: 2019,
+    Month: "January",
+    State: "Kansas",
+    "Production (million cubic ft)": "16063"
+  },
+  {
+    Year: 2020,
+    Month: "January",
+    State: "Kansas",
+    "Production (million cubic ft)": "13349"
+  },
+  {
+    Year: 2021,
+    Month: "January",
+    State: "Kansas",
+    "Production (million cubic ft)": "12625"
+  },
+  {
+    Year: 2018,
+    Month: "January",
+    State: "Louisiana",
+    "Production (million cubic ft)": "210854"
+  },
+  {
+    Year: 2019,
+    Month: "January",
+    State: "Louisiana",
+    "Production (million cubic ft)": "259035"
+  },
+  {
+    Year: 2020,
+    Month: "January",
+    State: "Louisiana",
+    "Production (million cubic ft)": "279056"
+  },
+  {
+    Year: 2021,
+    Month: "January",
+    State: "Louisiana",
+    "Production (million cubic ft)": "271,853"
+  },
+  {
+    Year: 2018,
+    Month: "January",
+    State: "Montana",
+    "Production (million cubic ft)": "3771"
+  },
+  {
+    Year: 2019,
+    Month: "January",
+    State: "Montana",
+    "Production (million cubic ft)": "3773"
+  },
+  {
+    Year: 2020,
+    Month: "January",
+    State: "Montana",
+    "Production (million cubic ft)": "3580"
+  },
+  {
+    Year: 2021,
+    Month: "January",
+    State: "Montana",
+    "Production (million cubic ft)": "3,216"
+  },
+  {
+    Year: 2018,
+    Month: "January",
+    State: "New Mexico",
+    "Production (million cubic ft)": "113442"
+  },
+  {
+    Year: 2019,
+    Month: "January",
+    State: "New Mexico",
+    "Production (million cubic ft)": "137823"
+  },
+  {
+    Year: 2020,
+    Month: "January",
+    State: "New Mexico",
+    "Production (million cubic ft)": "164472"
+  },
+  {
+    Year: 2021,
+    Month: "January",
+    State: "New Mexico",
+    "Production (million cubic ft)": "176,736"
+  },
+  {
+    Year: 2018,
+    Month: "January",
+    State: "North Dakota",
+    "Production (million cubic ft)": "54194"
+  },
+  {
+    Year: 2019,
+    Month: "January",
+    State: "North Dakota",
+    "Production (million cubic ft)": "67939"
+  },
+  {
+    Year: 2020,
+    Month: "January",
+    State: "North Dakota",
+    "Production (million cubic ft)": "74489"
+  },
+  {
+    Year: 2021,
+    Month: "January",
+    State: "North Dakota",
+    "Production (million cubic ft)": "69,141"
+  },
+  {
+    Year: 2018,
+    Month: "January",
+    State: "Ohio",
+    "Production (million cubic ft)": "186558"
+  },
+  {
+    Year: 2019,
+    Month: "January",
+    State: "Ohio",
+    "Production (million cubic ft)": "213497"
+  },
+  {
+    Year: 2020,
+    Month: "January",
+    State: "Ohio",
+    "Production (million cubic ft)": "210045"
+  },
+  {
+    Year: 2021,
+    Month: "January",
+    State: "Ohio",
+    "Production (million cubic ft)": "206,647"
+  },
+  {
+    Year: 2018,
+    Month: "January",
+    State: "Oklahoma",
+    "Production (million cubic ft)": "232715"
+  },
+  {
+    Year: 2019,
+    Month: "January",
+    State: "Oklahoma",
+    "Production (million cubic ft)": "262662"
+  },
+  {
+    Year: 2020,
+    Month: "January",
+    State: "Oklahoma",
+    "Production (million cubic ft)": "263734"
+  },
+  {
+    Year: 2021,
+    Month: "January",
+    State: "Oklahoma",
+    "Production (million cubic ft)": "224,024"
+  },
+  {
+    Year: 2018,
+    Month: "January",
+    State: "Pennsylvania",
+    "Production (million cubic ft)": "506627"
+  },
+  {
+    Year: 2019,
+    Month: "January",
+    State: "Pennsylvania",
+    "Production (million cubic ft)": "576440"
+  },
+  {
+    Year: 2020,
+    Month: "January",
+    State: "Pennsylvania",
+    "Production (million cubic ft)": "607697"
+  },
+  {
+    Year: 2021,
+    Month: "January",
+    State: "Pennsylvania",
+    "Production (million cubic ft)": "657,682"
+  },
+  {
+    Year: 2018,
+    Month: "January",
+    State: "Texas",
+    "Production (million cubic ft)": "617543"
+  },
+  {
+    Year: 2019,
+    Month: "January",
+    State: "Texas",
+    "Production (million cubic ft)": "736511"
+  },
+  {
+    Year: 2020,
+    Month: "January",
+    State: "Texas",
+    "Production (million cubic ft)": "827368"
+  },
+  {
+    Year: 2021,
+    Month: "January",
+    State: "Texas",
+    "Production (million cubic ft)": "775,209"
+  },
+  {
+    Year: 2018,
+    Month: "January",
+    State: "Utah",
+    "Production (million cubic ft)": "25551"
+  },
+  {
+    Year: 2019,
+    Month: "January",
+    State: "Utah",
+    "Production (million cubic ft)": "23200"
+  },
+  {
+    Year: 2020,
+    Month: "January",
+    State: "Utah",
+    "Production (million cubic ft)": "21856"
+  },
+  {
+    Year: 2021,
+    Month: "January",
+    State: "Utah",
+    "Production (million cubic ft)": "19,193"
+  },
+  {
+    Year: 2018,
+    Month: "January",
+    State: "West Virginia",
+    "Production (million cubic ft)": "139078"
+  },
+  {
+    Year: 2019,
+    Month: "January",
+    State: "West Virginia",
+    "Production (million cubic ft)": "169050"
+  },
+  {
+    Year: 2020,
+    Month: "January",
+    State: "West Virginia",
+    "Production (million cubic ft)": "205973"
+  },
+  {
+    Year: 2021,
+    Month: "January",
+    State: "West Virginia",
+    "Production (million cubic ft)": "231,186"
+  },
+  {
+    Year: 2018,
+    Month: "January",
+    State: "Wyoming",
+    "Production (million cubic ft)": "142873"
+  },
+  {
+    Year: 2019,
+    Month: "January",
+    State: "Wyoming",
+    "Production (million cubic ft)": "123341"
+  }
+];
+
+$(document).ready(function() {
+  $("#example").DataTable({
+    data: dataSet,
+    processing: true,
+    columns: [
+      { data: "Year" },
+      { data: "Month" },
+      { data: "State" },
+      { data: "Production (million cubic ft)" }
+    ],
+    language: {
+      searchPlaceholder: "Search",
+      search: ""
+    },
+    scrollX: 1000,
+    scrollY: 600,
+    autoFill: true,
+    paging: false,
+    autoWidth: true
+  });
+});
+</script>
+
+    <div class="main-text">
+      <p>
+While this trend did carry into 2021, experts predict that this trend will be short-lived      </p>
+      <p data-dummytext="">
+        As life returns to normal, people’s gas consumption is also expected to return to previous behaviors as well. Additionally, while past year’s higher rates had an impact on demand, these low rates can expect to have similar impacts. With a decrease in production, 2022 can expect to see much higher rates in order to recover from these last two years. 
+
+      </p>
+    </div>
+        
+
+    <!-- your data methodology section -->
+
+    <div id="data-method">
+      <p>
+    https://www.eia.gov/outlooks/steo/realprices/
+    https://datahub.io/core/natural-gas
+
+      </p>
+    </div>
+
+    <!-- add more credits to your teammates  -->
+    <section class="credits">
+      <div class="credtx">
+        AUTHOR:
+        <a href="https://twitter.com/" target="_blank">Student Author</a>
+      </div>
+      <div class="credtx">
+        EDITOR:
+        <a href="https://twitter.com/" target="_blank">Student Editor</a>
+      </div>
+      <div class="credtx">
+        GRAPHIC DESIGN:
+        <a href="https://twitter.com/" target="_blank">Student Designer</a>
+      </div>
+      <div class="credtx">
+        PHOTO:
+        <a href="https://twitter.com/" target="_blank">Student Photographer</a>
+      </div>
+      <div class="credtx">
+        WEB DEVELOPMENT:
+        <a href="https://twitter.com/" target="_blank">Student Web Developer</a>
+      </div>
+    </section>
+
+    <!-- add things to your footer-->
+    <footer>
+      <p>© Copyright 2021, Manhattan, KS</p>
+    </footer>
+
+  </body>
+</html>
